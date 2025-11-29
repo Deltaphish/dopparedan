@@ -92,10 +92,10 @@
                  (link {:rel "stylesheet" :href "index.css"})
                  (title "dopparedan"))
                 (body
-                 (div {:id "main"}
-                      (h1 "Idag är: ")
-                      (p content)
-                      (p "Kolla imorgon för uppdateringar!")))))
+                 (main
+                  (h1 "Idag är: ")
+                  (p content)
+                  (p "Kolla imorgon för uppdateringar!")))))
 
 
 
