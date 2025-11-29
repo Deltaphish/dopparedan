@@ -79,9 +79,10 @@
 
 (defn generate-text [count]
   (case count
-        0 "dopparedan! God jul!"
-        (str (str/join (repeat count "dan före "))
-             "dopparedan!")))
+    0 "dopparedan! God jul!"
+    (str (str/join (repeat count "dan före "))
+         (format "(%d) " count)
+         "dopparedan!")))
 
 
 (defn page
@@ -94,8 +95,7 @@
                 (body
                  (main
                   (h1 "Idag är: ")
-                  (p content)
-                  (p "Kolla imorgon för uppdateringar!")))))
+                  (p content)))))
 
 
 
