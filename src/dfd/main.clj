@@ -1,6 +1,7 @@
-(ns dfd
+(ns dfd.main
   (:require [clojure.string :as str]
-            [java-time.api :as t]))
+            [java-time.api :as t])
+  (:gen-class))
 
 ;;; HTML GENERATION ;;;
 
@@ -98,7 +99,7 @@
 
 
 
-(defn run [opts]
+(defn -main [& args]
   (let [dagar (dagar_till_dopparedan)
         text (generate-text dagar)]
     (-> text

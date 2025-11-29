@@ -1,3 +1,7 @@
-{:deps
- {clojure.java-time/clojure.java-time {:mvn/version "1.4.3"}}}
+{:paths ["src"]
+ :deps
+  {clojure.java-time/clojure.java-time {:mvn/version "1.4.3"}}
+ :aliases
+  {:build {:deps {io.github.clojure/tools.build {:git/tag "v0.10.11" :git/sha "c6c670a4ea82709d7f88aa3a9e35e0be76342417"}}
+           :ns-default build}}}
 
