@@ -75,7 +75,7 @@
 (defn dagar_till_dopparedan
   [] (let [now (t/local-date)
            doppare-dagen (t/local-date "yyyy/MM/dd" (str (t/format "yyyy" now) "/12/24"))]
-       (+ 1 (mod (t/time-between now doppare-dagen :days) 365))))
+       (mod (t/time-between now doppare-dagen :days) 365)))
 
 (defn generate-text [count]
   (case count
